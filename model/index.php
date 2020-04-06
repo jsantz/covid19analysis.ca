@@ -27,11 +27,37 @@ include '../header.php';
         text-align: center;
         line-height: 1.6em;
     }
+    #shelter-handle{
+        width: 5em;
+        height: 3em;
+        top: 50%;
+        margin-top: -.8em;
+        text-align: center;
+        line-height: 1.6em;
+    }
+    #radius-handle{
+        width: 5em;
+        height: 3em;
+        top: 50%;
+        margin-top: -.8em;
+        text-align: center;
+        line-height: 1.6em;
+    }
+    #infectionTime-handle{
+        width: 5em;
+        height: 3em;
+        top: 50%;
+        margin-top: -.8em;
+        text-align: center;
+        line-height: 1.6em;
+    }
 </style>
 <body>
 <script src="../js/Chart.min.js"></script>
 <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 <button id="runsimulation" class="btn btn-outline-primary btn-lg">RESET SIMULATION</button>
+<hr>
+<p class="h6">Bounce on/off | <input id="isBounce" type="checkbox" data-toggle="toggle" data-size="lg" ></p>
 <hr>
 
 
@@ -63,11 +89,41 @@ include '../header.php';
 </div>
 <hr>
 
+
+<p class="h6">
+    <label for="shelter">% Shelter In Place</label>
+    <input type="text" id="shelter-label" readonly style="border:0; color:#f6931f; font-weight:bold;">
+</p>
+<div id="shelter">
+    <div id="shelter-handle" class="ui-slider-handle"></div>
+</div>
+<hr>
+
+<p class="h6">
+    <label for="radius">Infection Radius</label>
+    <input type="text" id="radius-label" readonly style="border:0; color:#f6931f; font-weight:bold;">
+</p>
+<div id="radius">
+    <div id="radius-handle" class="ui-slider-handle"></div>
+</div>
+<hr>
+
+<p class="h6">
+    <label for="infectionTime">Infection Time (epochs)</label>
+    <input type="text" id="infectionTime-label" readonly style="border:0; color:#f6931f; font-weight:bold;">
+</p>
+<div id="infectionTime">
+    <div id="infectionTime-handle" class="ui-slider-handle"></div>
+</div>
+<hr>
+
+
+
+<div style="width:700px;">
+    <canvas id="canvas"></canvas>
+</div>
 <script src="../js/pixi.min.js"></script>
 <script src="../js/model.min.js"></script>
-    <div style="width:700px;">
-        <canvas id="canvas"></canvas>
-    </div>
     <script>
         $( function() {
             var handle = $( "#custom-handle" );
@@ -119,6 +175,57 @@ include '../header.php';
                 }
             });
             $( "#movementspd-label" ).val('% '  + $( "#movementspd" ).slider( "value" ) );
+        } );//shelter
+        $( function() {
+            var handle = $( "#shelter-handle" );
+            $( "#shelter" ).slider({
+                range: "min",
+                value: 0,
+                min: 0,
+                max: 100,
+                create: function() {
+                    handle.text( $( this ).slider( "value" ) );
+                },
+                slide: function( event, ui ) {
+                    $( "#shelter-label" ).val('% ' + ui.value );
+                    handle.text('%' + ui.value );
+                }
+            });
+            $( "#shelter-label" ).val('% ' + $( "#shelter" ).slider( "value" ) );
+        } );//radius
+        $( function() {
+            var handle = $( "#radius-handle" );
+            $( "#radius" ).slider({
+                range: "min",
+                value: 10,
+                min: 1,
+                max: 20,
+                create: function() {
+                    handle.text( $( this ).slider( "value" ) );
+                },
+                slide: function( event, ui ) {
+                    $( "#radius-label" ).val( ui.value );
+                    handle.text( ui.value );
+                }
+            });
+            $( "#radius-label" ).val($( "#radius" ).slider( "value" ) );
+        } );//infectionTime
+        $( function() {
+            var handle = $( "#infectionTime-handle" );
+            $( "#infectionTime" ).slider({
+                range: "min",
+                value: 10,
+                min: 1,
+                max: 30,
+                create: function() {
+                    handle.text( $( this ).slider( "value" ) );
+                },
+                slide: function( event, ui ) {
+                    $( "#infectionTime-label" ).val( ui.value );
+                    handle.text( ui.value );
+                }
+            });
+            $( "#infectionTime-label" ).val($( "#infectionTime" ).slider( "value" ) );
         } );
     </script>
 </body>
