@@ -1,6 +1,6 @@
 <!doctype html>
 <?php
-include 'header.php';
+include '../header.php';
 ?>
 <body>
 <script src="../js/pixi.min.js"></script>
