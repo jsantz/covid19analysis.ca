@@ -1,6 +1,7 @@
 <!doctype html>
-<meta charset="utf-8">
-<title>Pandemic Model</title>
+<?php
+include 'header.php';
+?>
 <body>
 <script src="../js/pixi.min.js"></script>
 <script src="../js/model.min.js"></script>
