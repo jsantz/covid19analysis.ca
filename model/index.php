@@ -63,7 +63,7 @@ include '../header.php';
 
 <p class="h6">
     <label for="amount">Total Healthy Population</label>
-    <input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;"> (Mobile: double tap slidebars to move slider)
+    <input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;"> (Mobile: tap slide bars to move slider)
 </p>
 <div id="slider-range-min">
     <div id="custom-handle" class="ui-slider-handle"></div>
