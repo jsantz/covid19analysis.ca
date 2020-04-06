@@ -16,9 +16,9 @@ include '../header.php';
 <script src="../js/Chart.min.js"></script>
 <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 <button id="runsimulation" class="btn btn-outline-primary btn-lg">RESET SIMULATION</button>
-<p>
+<p class="h4">
     <label for="amount">Total Healthy Population</label>
-    <input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;">
+    <input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;">| (double tap slidebar to move)
 </p>
 <div id="slider-range-min">
     <div id="custom-handle" class="ui-slider-handle"></div>
