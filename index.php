@@ -76,7 +76,7 @@ include 'aggregator.php';
 <div id="mygraph"></div>
 <div id="info"></div>
 
-<script src="js/main.js"></script>
+<script src="js/vis-b.min.js"></script>
 </body>
 
 </html>
