@@ -19,6 +19,14 @@ include '../header.php';
         text-align: center;
         line-height: 1.6em;
     }
+    #movementspd-handle{
+        width: 5em;
+        height: 3em;
+        top: 50%;
+        margin-top: -.8em;
+        text-align: center;
+        line-height: 1.6em;
+    }
 </style>
 <body>
 <script src="../js/Chart.min.js"></script>
@@ -29,7 +37,7 @@ include '../header.php';
 
 <p class="h6">
     <label for="amount">Total Healthy Population</label>
-    <input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;">| (double tap slidebars to set values)
+    <input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;"> (Mobile: double tap slidebars to move slider)
 </p>
 <div id="slider-range-min">
     <div id="custom-handle" class="ui-slider-handle"></div>
@@ -46,7 +54,14 @@ include '../header.php';
 </div>
 <hr>
 
-
+<p class="h6">
+    <label for="movementspd">Social Speed</label>
+    <input type="text" id="movementspd-label" readonly style="border:0; color:#f6931f; font-weight:bold;">
+</p>
+<div id="movementspd">
+    <div id="movementspd-handle" class="ui-slider-handle"></div>
+</div>
+<hr>
 
 <script src="../js/pixi.min.js"></script>
 <script src="../js/model.min.js"></script>
@@ -87,6 +102,23 @@ include '../header.php';
                 }
             });
             $( "#transmissibility-label" ).val('% '  + $( "#transmissibility" ).slider( "value" ) );
+        } );
+        $( function() {
+            var handle = $( "#movementspd-handle" );
+            $( "#movementspd" ).slider({
+                range: "min",
+                value: 100,
+                min: 1,
+                max: 200,
+                create: function() {
+                    handle.text( $( this ).slider( "value" ) );
+                },
+                slide: function( event, ui ) {
+                    $( "#movementspd-label" ).val('% ' + ui.value );
+                    handle.text('%' + ui.value );
+                }
+            });
+            $( "#movementspd-label" ).val('% '  + $( "#movementspd" ).slider( "value" ) );
         } );
     </script>
 </body>
