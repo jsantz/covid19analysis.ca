@@ -8,7 +8,8 @@
      *
      */
 
-    define( 'LOGPATH', '../somerandom.co/wp-content/uploads/plotterlogs' );
+    define( 'LOGPATH', '../wordpress/wp-content/uploads/plotterlogs' );
+    //define( 'LOGPATH', '../somerandom.co/wp-content/uploads/plotterlogs' );
     // MAIN
 
     $worldOmeters = array();

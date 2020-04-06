@@ -10,7 +10,6 @@ include 'header.php';
 
 
 <body>
-<h4><span class="text-success">(Work in Progress)</span></h4>
 <hr>
 <div id="mygraph2"></div>
 <div id="info2"></div>

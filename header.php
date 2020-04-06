@@ -10,6 +10,15 @@
     <script src="js/Chart.min.js"></script>
     <title>COVID19</title>
     <link rel="shortcut icon" type="image/x-icon" href="https://argylefoxinc.com/functions/modules/argylefox/images/favicon.ico" />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-161235927-2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-161235927-2');
+    </script>
 
     <style>
         body {font: 10pt arial;}
