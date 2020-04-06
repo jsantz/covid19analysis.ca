@@ -10,7 +10,6 @@ include 'header.php';
 
 
 <body>
-<h1 class="display-4"><span class="text-danger">COVID-19</span> Data Tracking/Analysis</h1>
 <h4><span class="text-success">(Work in Progress)</span></h4>
 <p class="h4">Collected every 6 hours from:</p>
 <ul class="list-group">
