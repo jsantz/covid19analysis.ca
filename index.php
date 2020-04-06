@@ -10,6 +10,8 @@ include 'header.php';
 
 
 <body>
+<script src="js/Chart.min.js"></script>
+<script type="text/javascript" src="js/vis-graph3d.min.js"></script>
 <hr>
 <div id="mygraph2"></div>
 <div id="info2"></div>

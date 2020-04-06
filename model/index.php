@@ -3,6 +3,7 @@
 include '../header.php';
 ?>
 <body>
+<script src="../js/Chart.min.js"></script>
 <button></button>
 <div class="form-group">
     <label for="exampleFormControlInput1">Email address</label>
@@ -31,8 +32,9 @@ include '../header.php';
 <div class="form-group">
 <script src="../js/pixi.min.js"></script>
 <script src="../js/model.min.js"></script>
-<script>
-</script>
+    <div style="width:100%;">
+        <canvas id="canvas"></canvas>
+    </div>>
 </body>
 
 
