@@ -57,7 +57,7 @@ include '../header.php';
 <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 <button id="runsimulation" class="btn btn-outline-primary btn-lg">RESET SIMULATION</button>
 <hr>
-<p class="h6">Bounce on/off | <input id="isBounce" type="checkbox" data-toggle="toggle" data-size="lg" ></p>
+<p class="h6">Bounce on/off | <input id="isBounce" type="checkbox" checked data-toggle="toggle" data-size="lg" ></p>
 <hr>
 
 
@@ -124,110 +124,7 @@ include '../header.php';
 </div>
 <script src="../js/pixi.min.js"></script>
 <script src="../js/model.min.js"></script>
-    <script>
-        $( function() {
-            var handle = $( "#custom-handle" );
-            $( "#slider-range-min" ).slider({
-                range: "min",
-                value: 200,
-                min: 50,
-                max: 400,
-                create: function() {
-                    handle.text( $( this ).slider( "value" ) );
-                },
-                slide: function( event, ui ) {
-                    $( "#amount" ).val( ui.value );
-                    handle.text( ui.value );
-                }
-            });
-            $( "#amount" ).val(  + $( "#slider-range-min" ).slider( "value" ) );
-        } );
-        $( function() {
-            var handle = $( "#transmissibility-handle" );
-            $( "#transmissibility" ).slider({
-                range: "min",
-                value: 20,
-                min: 1,
-                max: 100,
-                create: function() {
-                    handle.text( $( this ).slider( "value" ) );
-                },
-                slide: function( event, ui ) {
-                    $( "#transmissibility-label" ).val('% ' + ui.value );
-                    handle.text('%' + ui.value );
-                }
-            });
-            $( "#transmissibility-label" ).val('% '  + $( "#transmissibility" ).slider( "value" ) );
-        } );
-        $( function() {
-            var handle = $( "#movementspd-handle" );
-            $( "#movementspd" ).slider({
-                range: "min",
-                value: 100,
-                min: 1,
-                max: 200,
-                create: function() {
-                    handle.text( $( this ).slider( "value" ) );
-                },
-                slide: function( event, ui ) {
-                    $( "#movementspd-label" ).val('% ' + ui.value );
-                    handle.text('%' + ui.value );
-                }
-            });
-            $( "#movementspd-label" ).val('% '  + $( "#movementspd" ).slider( "value" ) );
-        } );//shelter
-        $( function() {
-            var handle = $( "#shelter-handle" );
-            $( "#shelter" ).slider({
-                range: "min",
-                value: 0,
-                min: 0,
-                max: 100,
-                create: function() {
-                    handle.text( $( this ).slider( "value" ) );
-                },
-                slide: function( event, ui ) {
-                    $( "#shelter-label" ).val('% ' + ui.value );
-                    handle.text('%' + ui.value );
-                }
-            });
-            $( "#shelter-label" ).val('% ' + $( "#shelter" ).slider( "value" ) );
-        } );//radius
-        $( function() {
-            var handle = $( "#radius-handle" );
-            $( "#radius" ).slider({
-                range: "min",
-                value: 10,
-                min: 1,
-                max: 20,
-                create: function() {
-                    handle.text( $( this ).slider( "value" ) );
-                },
-                slide: function( event, ui ) {
-                    $( "#radius-label" ).val( ui.value );
-                    handle.text( ui.value );
-                }
-            });
-            $( "#radius-label" ).val($( "#radius" ).slider( "value" ) );
-        } );//infectionTime
-        $( function() {
-            var handle = $( "#infectionTime-handle" );
-            $( "#infectionTime" ).slider({
-                range: "min",
-                value: 10,
-                min: 1,
-                max: 30,
-                create: function() {
-                    handle.text( $( this ).slider( "value" ) );
-                },
-                slide: function( event, ui ) {
-                    $( "#infectionTime-label" ).val( ui.value );
-                    handle.text( ui.value );
-                }
-            });
-            $( "#infectionTime-label" ).val($( "#infectionTime" ).slider( "value" ) );
-        } );
-    </script>
+
 </body>
 
 
