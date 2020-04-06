@@ -4,7 +4,13 @@ include '../header.php';
 ?>
 <body>
 <script src="../js/Chart.min.js"></script>
-<button></button>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<button id="runsimulation" class="btn btn-outline-primary btn-lg">RESET SIMULATION</button>
+<p>
+    <label for="amount">Total Healthy Population</label>
+    <input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;">
+</p>
+<div id="slider-range-min"></div>
 <div class="form-group">
     <label for="exampleFormControlInput1">Email address</label>
     <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
@@ -32,9 +38,23 @@ include '../header.php';
 <div class="form-group">
 <script src="../js/pixi.min.js"></script>
 <script src="../js/model.min.js"></script>
-    <div style="width:100%;">
+    <div style="width:700px;">
         <canvas id="canvas"></canvas>
-    </div>>
+    </div>
+    <script>
+        $( function() {
+            $( "#slider-range-min" ).slider({
+                range: "min",
+                value: 200,
+                min: 50,
+                max: 300,
+                slide: function( event, ui ) {
+                    $( "#amount" ).val( "$" + ui.value );
+                }
+            });
+            $( "#amount" ).val(  + $( "#slider-range-min" ).slider( "value" ) );
+        } );
+    </script>
 </body>
 
 
