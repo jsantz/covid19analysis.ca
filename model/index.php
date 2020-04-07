@@ -152,17 +152,19 @@ include '../header.php';
                     <div id="mortality-handle" class="ui-slider-handle"></div>
                 </div>
                 <hr>
-
-
-
-
             </div>
         </div>
     </div>
 </div>
 
 
-
+<div style="width:100%; height:30px; text-align:center;">
+    <p>
+        Susceptible: <span style="color:#a4c15b;" id="phealthy"></span> |
+        Infected: <span style="color:#FF0000;" id="pinfected"></span> |
+        Immune: <span style="color:#4383cc;" id="pimmune"></span> |
+        Victims: <span style="color:#505050;" id="pmortal"></span></p>
+</div>
 <div style="width:800px;">
     <canvas id="canvassim"></canvas>
 </div>
