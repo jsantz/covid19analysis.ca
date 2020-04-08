@@ -165,7 +165,7 @@ include '../header.php';
         Immune: <span style="color:#a4c15b;" id="pimmune"></span> |
         Victims: <span style="color:#505050;" id="pmortal"></span></p>
 </div>
-<div style="width:800px;">
+<div style="width:800px;" id="graphholder">
     <canvas id="canvasperc"></canvas>
     <canvas id="canvassim"></canvas>
 </div>
