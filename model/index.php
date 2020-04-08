@@ -166,6 +166,7 @@ include '../header.php';
         Victims: <span style="color:#505050;" id="pmortal"></span></p>
 </div>
 <div style="width:800px;">
+    <canvas id="canvasperc"></canvas>
     <canvas id="canvassim"></canvas>
 </div>
 <script src="../js/pixi.min.js"></script>
