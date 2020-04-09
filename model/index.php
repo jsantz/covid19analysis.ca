@@ -79,9 +79,9 @@ include '../header.php';
 <body>
 <script src="../js/Chart.min.js"></script>
 <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-<hr>
 <p class="h4">Bounce on/off | <input id="isBounce" type="checkbox" checked data-toggle="toggle" data-size="lg" ></p>
 <span style="font-weight:bold">"Bouncing" Simulates Restrained Social Grouping.</span> | <span style="font-weight:bold">(Mobile: tap slide bars to move slider)</span>
+<hr>
 <button id="runsimulation" class="btn btn-outline-danger btn-lg btn-block">RESET SIMULATION</button>
 <hr>
 <div id="accordion">
