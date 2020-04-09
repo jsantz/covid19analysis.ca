@@ -16,7 +16,12 @@ include 'header.php';
 
 
     <h4>Go To Model</h4>
-    <a href="/model/" class="btn-large btn-primary">Go To Model</a>
+    <button id="goToModel" type="button" class="btn btn-primary btn-lg btn-block">Go To Home</button>
+    <script>
+        $("#goToModel").click(function(){
+            window.location.href ="/model/";
+        });
+    </script>
 
 </div>
 <script src="js/Chart.min.js"></script>

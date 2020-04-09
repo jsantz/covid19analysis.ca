@@ -5,6 +5,11 @@ include 'header.php';
 
 
     <h1>404 error not found.</h1>
-    <a href="/" class="btn-large btn-primary">Go To Home</a>
+    <button id="goToHome" type="button" class="btn btn-primary btn-lg btn-block">Go To Home</button>
+    <script>
+        $("#goToHome").click(function(){
+            window.location.href ="/";
+        });
+    </script>
 
 </div>
