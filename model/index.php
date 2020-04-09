@@ -159,7 +159,7 @@ include '../header.php';
                 <p class="h6">
                     <label for="radius"><span style="font-weight:bold">Infection/Interaction Radius</span></label>
                     <input type="text" id="radius-label" readonly style="border:0; color:#f6931f; font-weight:bold;">
-                    The space of the interaction box: gives another dimension to social distancing and R0
+                    The space of the interaction box
                 </p>
                 <div id="radius">
                     <div id="radius-handle" class="ui-slider-handle"></div>
@@ -169,6 +169,7 @@ include '../header.php';
                 <p class="h6">
                     <label for="infectionTime"><span style="font-weight:bold">Infection Time (epochs)</span></label>
                     <input type="text" id="infectionTime-label" readonly style="border:0; color:#f6931f; font-weight:bold;">
+                    The Length of time someone is contagious - Can simulate Testing
                 </p>
                 <div id="infectionTime">
                     <div id="infectionTime-handle" class="ui-slider-handle"></div>
