@@ -19,7 +19,7 @@
     <!--link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.css">
     <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsen-css-components.min.css">
     <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script-->
-    <title>COVID19</title>
+    <title>COVID19analysis.ca</title>
     <link rel="shortcut icon" type="image/x-icon" href="https://argylefoxinc.com/functions/modules/argylefox/images/favicon.ico" />
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-161235927-2"></script>
@@ -43,7 +43,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.bundle.js"></script-->
 </head>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand h4" href="/"><span class="text-danger h4">COVID-19</span> Study</a>
+    <a class="navbar-brand h4" href="/"><span class="text-danger h4">COVID-19</span>Analysis.ca</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
