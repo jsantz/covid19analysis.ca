@@ -159,7 +159,7 @@ include '../header.php';
 
 
 <div style="width:100%; height:30px; text-align:center;">
-    <p>
+    <p class="h4">
         Susceptible: <span style="color:#4383cc;" id="phealthy"></span> |
         Infected: <span style="color:#FF0000;" id="pinfected"></span> |
         Immune: <span style="color:#a4c15b;" id="pimmune"></span> |
