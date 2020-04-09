@@ -59,6 +59,22 @@ include '../header.php';
         text-align: center;
         line-height: 1.6em;
     }
+    #amountinf-handle{
+        width: 5em;
+        height: 3em;
+        top: 50%;
+        margin-top: -.8em;
+        text-align: center;
+        line-height: 1.6em;
+    }
+    #amountimm-handle{
+        width: 5em;
+        height: 3em;
+        top: 50%;
+        margin-top: -.8em;
+        text-align: center;
+        line-height: 1.6em;
+    }
 </style>
 <body>
 <script src="../js/Chart.min.js"></script>
@@ -83,7 +99,7 @@ include '../header.php';
 
 
                 <p class="h6">
-                    <label for="amount"> <span style="font-weight:bold">Total Healthy Population</span></label>
+                    <label for="amount"> <span style="font-weight:bold">Total Susceptible Population</span></label>
                     <input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;">
                     Can also simulate density
                 </p>
@@ -91,8 +107,24 @@ include '../header.php';
                     <div id="custom-handle" class="ui-slider-handle"></div>
                 </div>
                 <hr>
-
-
+                <p class="h6">
+                    <label for="amountinf"><span style="font-weight:bold; color:#b22222;">Total Infected</span></label>
+                    <input type="text" id="amountinf-label" readonly style="border:0; color:#f6931f; font-weight:bold;">
+                    Change this number to simulate multiple waves
+                </p>
+                <div id="amountinf">
+                    <div id="amountinf-handle" class="ui-slider-handle"></div>
+                </div>
+                <hr>
+                <p class="h6">
+                    <label for="amountimm"><span style="font-weight:bold; color:#0d5a10;">Total Immune</span></label>
+                    <input type="text" id="amountimm-label" readonly style="border:0; color:#f6931f; font-weight:bold;">
+                    Change this number to simulate multiple waves
+                </p>
+                <div id="amountimm">
+                    <div id="amountimm-handle" class="ui-slider-handle"></div>
+                </div>
+                <hr>
                 <p class="h6">
                     <label for="transmissibility"> <span style="font-weight:bold">Transmissibility</span></label>
                     <input type="text" id="transmissibility-label" readonly style="border:0; color:#f6931f; font-weight:bold;">
@@ -151,6 +183,7 @@ include '../header.php';
                 <div id="mortality">
                     <div id="mortality-handle" class="ui-slider-handle"></div>
                 </div>
+
                 <hr>
             </div>
         </div>
