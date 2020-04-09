@@ -15,8 +15,8 @@ include 'header.php';
 <div style="width:100%; text-align:center">
 
 
-    <h4>Go To Model</h4>
-    <button id="goToModel" type="button" class="btn btn-primary btn-lg btn-block">Go To Home</button>
+  
+    <button id="goToModel" type="button" class="btn btn-primary btn-lg btn-block">Go To Simulation/Model</button>
     <script>
         $("#goToModel").click(function(){
             window.location.href ="/model/";
