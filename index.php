@@ -10,6 +10,15 @@ include 'header.php';
 
 
 <body>
+
+
+<div style="width:100%; text-align:center">
+
+
+    <h4>Go To Model</h4>
+    <a href="/model/" class="btn-large btn-primary">Go To Model</a>
+
+</div>
 <script src="js/Chart.min.js"></script>
 <script type="text/javascript" src="js/vis-graph3d.min.js"></script>
 <hr>
